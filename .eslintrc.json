@@ -15,6 +15,8 @@
     ],
     "global-require": "off",
     "import/prefer-default-export": "off",
-    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": 0
   }
 }
