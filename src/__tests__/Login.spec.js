@@ -22,7 +22,7 @@ describe('Login in the DOM', () => {
   });
 });
 
-describe('Login functionallity', () => {
+describe('Login functionalities', () => {
   it('shows error messages for empty fields', async () => {
     const { getByTestId } = render(<Login />);
 
