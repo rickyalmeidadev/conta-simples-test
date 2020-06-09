@@ -16,6 +16,7 @@ exports[`Login in the DOM renders 1`] = `
           id="cpf"
           name="cpf"
           type="text"
+          value=""
         />
       </label>
       <label
@@ -27,6 +28,7 @@ exports[`Login in the DOM renders 1`] = `
           id="email"
           name="email"
           type="email"
+          value=""
         />
       </label>
       <label
@@ -38,6 +40,7 @@ exports[`Login in the DOM renders 1`] = `
           id="password"
           name="password"
           type="password"
+          value=""
         />
       </label>
       <button
