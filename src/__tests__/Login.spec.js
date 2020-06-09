@@ -1,5 +1,7 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import {
+  render, cleanup, fireEvent, waitForElement,
+} from '@testing-library/react';
 import Login from '../pages/Login';
 
 afterAll(cleanup);
@@ -17,5 +19,31 @@ describe('Login in the DOM', () => {
     expect(getByTestId('email')).toBeDefined();
     expect(getByTestId('password')).toBeDefined();
     expect(getByTestId('submit')).toBeDefined();
+  });
+});
+
+describe('Login functionallity', () => {
+  it('shows error messages for empty fields', async () => {
+    const { getByTestId } = render(<Login />);
+
+    fireEvent.click(getByTestId('submit'));
+
+    const error = await waitForElement(() => getByTestId('user-error'));
+
+    expect(error).toBeDefined();
+  });
+
+  it('shows error messages for wrong data', async () => {
+    const { getByTestId } = render(<Login />);
+
+    fireEvent.change(getByTestId('cpf'), { target: { value: 'invalid data' } });
+    fireEvent.change(getByTestId('email'), { target: { value: 'invalid data' } });
+    fireEvent.change(getByTestId('password'), { target: { value: 'invalid data' } });
+
+    fireEvent.click(getByTestId('submit'));
+
+    const error = await waitForElement(() => getByTestId('req-error'));
+
+    expect(error).toBeDefined();
   });
 });
