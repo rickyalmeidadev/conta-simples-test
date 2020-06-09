@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
-import Login from './index';
+import Login from '../pages/Login';
 
 afterAll(cleanup);
 
-describe('elements in the DOM', () => {
+describe('Login in the DOM', () => {
   it('renders', () => {
     const { asFragment } = render(<Login />);
     expect(asFragment()).toMatchSnapshot();

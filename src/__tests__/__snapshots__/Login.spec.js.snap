@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`elements in the DOM renders 1`] = `
+exports[`Login in the DOM renders 1`] = `
 <DocumentFragment>
   <form>
     <fieldset>
