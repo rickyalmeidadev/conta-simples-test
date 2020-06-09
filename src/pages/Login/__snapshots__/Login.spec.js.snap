@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`elements in the DOM renders 1`] = `
+<DocumentFragment>
+  <form>
+    <fieldset>
+      <legend>
+        Entrar
+      </legend>
+      <label
+        for="cpf"
+      >
+        CPF
+        <input
+          data-testid="cpf"
+          id="cpf"
+          name="cpf"
+          type="text"
+        />
+      </label>
+      <label
+        for="email"
+      >
+        E-mail
+        <input
+          data-testid="email"
+          id="email"
+          name="email"
+          type="email"
+        />
+      </label>
+      <label
+        for="password"
+      >
+        Senha
+        <input
+          data-testid="password"
+          id="password"
+          name="password"
+          type="password"
+        />
+      </label>
+      <button
+        data-testid="submit"
+        type="submit"
+      >
+        Entrar
+      </button>
+    </fieldset>
+  </form>
+</DocumentFragment>
+`;
