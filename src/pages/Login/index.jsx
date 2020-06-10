@@ -50,7 +50,7 @@ const Login = () => {
     try {
       const response = await login(email, password);
       storeToken(response.data.accessToken);
-      history.push('/');
+      history.push('/account');
     } catch (error) {
       setReqError(true);
     }
