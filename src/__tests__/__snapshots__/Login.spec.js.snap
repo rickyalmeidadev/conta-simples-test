@@ -14,6 +14,7 @@ exports[`Login in the DOM renders 1`] = `
         <input
           data-testid="cpf"
           id="cpf"
+          maxlength="14"
           name="cpf"
           type="text"
           value=""

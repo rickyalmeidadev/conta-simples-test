@@ -39,12 +39,12 @@ describe('Login functionalities', () => {
   it('shows error messages for wrong data', async () => {
     const { getByTestId } = render(<Login />);
 
-    fireEvent.change(getByTestId('cpf'), { target: { value: 'invalid data' } });
+    fireEvent.change(getByTestId('cpf'), { target: { value: '000.000.000.00' } });
     fireEvent.change(getByTestId('email'), {
-      target: { value: 'invalid data' },
+      target: { value: 'wrong@email.com' },
     });
     fireEvent.change(getByTestId('password'), {
-      target: { value: 'invalid data' },
+      target: { value: 'wrong-password' },
     });
 
     fireEvent.click(getByTestId('submit'));
