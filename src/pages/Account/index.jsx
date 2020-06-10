@@ -5,7 +5,9 @@ const Account = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    getUser().then(console.log).catch(console.error);
+    getUser().then(response => {
+      setUser(response.data);
+    }).catch(console.error);
   }, []);
 
   return (
