@@ -20,4 +20,9 @@ describe('<Account />', () => {
 
     expect(getByText(/bem-vindo/i)).toContains(`${response.name}`);
   });
+
+  it('display an card for statement', () => {
+    const { getByTestId } = render(<Account />);
+    expect(getByTestId('statement')).toBeDefinied();
+  });
 });

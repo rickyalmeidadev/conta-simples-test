@@ -3,7 +3,24 @@
 exports[`<Account /> renders correctly 1`] = `
 <DocumentFragment>
   <h1>
-    Account
+    Bem-vindo(a), Nome
   </h1>
+  <section>
+    <article
+      data-testid="statement"
+    >
+      <h2>
+        Estrato
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+      <button
+        type="button"
+      >
+        Ver estrato
+      </button>
+    </article>
+  </section>
 </DocumentFragment>
 `;
