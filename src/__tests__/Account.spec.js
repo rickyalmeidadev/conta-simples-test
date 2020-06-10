@@ -23,6 +23,6 @@ describe('<Account />', () => {
 
   it('display an card for statement', () => {
     const { getByTestId } = render(<Account />);
-    expect(getByTestId('statement')).toBeDefinied();
+    expect(getByTestId('statement')).toBeDefined();
   });
 });
