@@ -19,6 +19,25 @@ const Login = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleCpf = (event) => {
+    let { value } = event.target;
+
+    if (/[A-Za-z]/.test(value)) return;
+
+    if (value.length >= 11) {
+      value = value.replace(/(\d{3})\.(\d{3})\.(\d{3})-/, '$1.$2.$3');
+      value = value.replace(/(\d{3})\.(\d{3})\.(\d{3})(\d+)/g, '$1.$2.$3-$4');
+    } else if (value.length >= 7) {
+      value = value.replace(/(\d{3})\.(\d{3})\./g, '$1.$2');
+      value = value.replace(/(\d{3})\.(\d{3})(\d+)/g, '$1.$2.$3');
+    } else if (value.length >= 3) {
+      value = value.replace(/(\d{3})\./g, '$1');
+      value = value.replace(/(\d{3})(\d+)/g, '$1.$2');
+    }
+
+    setFormData({ ...formData, cpf: value });
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -50,8 +69,9 @@ const Login = () => {
             type="text"
             id="cpf"
             name="cpf"
+            maxLength="14"
             value={cpf}
-            onChange={handleChange}
+            onChange={handleCpf}
             data-testid="cpf"
           />
         </label>

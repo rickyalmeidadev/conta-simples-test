@@ -1,6 +1,9 @@
 import React from 'react';
 import {
-  render, cleanup, fireEvent, waitForElement,
+  render,
+  cleanup,
+  fireEvent,
+  waitForElement,
 } from '@testing-library/react';
 import Login from '../pages/Login';
 
@@ -37,8 +40,12 @@ describe('Login functionalities', () => {
     const { getByTestId } = render(<Login />);
 
     fireEvent.change(getByTestId('cpf'), { target: { value: 'invalid data' } });
-    fireEvent.change(getByTestId('email'), { target: { value: 'invalid data' } });
-    fireEvent.change(getByTestId('password'), { target: { value: 'invalid data' } });
+    fireEvent.change(getByTestId('email'), {
+      target: { value: 'invalid data' },
+    });
+    fireEvent.change(getByTestId('password'), {
+      target: { value: 'invalid data' },
+    });
 
     fireEvent.click(getByTestId('submit'));
 
