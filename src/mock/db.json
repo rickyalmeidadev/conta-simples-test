@@ -3,7 +3,72 @@
     {
       "email": "fernando@email.com",
       "password": "$2a$10$WaTaSmQdssaSVxjWotsimebt4yKo081X2qLcvfJwivxfua/TeuCA6",
-      "id": 1
+      "id": 1,
+      "name": "Empresa do Fernando",
+      "avatar": "image",
+      "balance": 78890.89,
+      "transactions": [
+        {
+          "name": "Facebook Inc.",
+          "price": 39.8,
+          "date": "2020-05-20T09:40:31-0300",
+          "debit": true
+        },
+        {
+          "name": "Facebook Inc.",
+          "price": 25.8,
+          "date": "2020-05-10T09:40:31-0300",
+          "debit": true
+        },
+        {
+          "name": "Amazon Web Services, Inc.",
+          "price": 299.3,
+          "date": "2020-05-17T16:40:00-0300",
+          "debit": true
+        },
+        {
+          "name": "Amazon Web Services, Inc.",
+          "price": 299.3,
+          "date": "2020-04-17T16:40:00-0300",
+          "debit": true
+        },
+        {
+          "name": "Amazon Web Services, Inc.",
+          "price": 39.8,
+          "date": "2020-05-07T16:40:31-0300",
+          "debit": true
+        },
+        {
+          "name": "Google inc.",
+          "price": 320.6,
+          "date": "2020-05-22T09:40:31-0300",
+          "debit": false
+        },
+        {
+          "name": "Google inc.",
+          "price": 420.3,
+          "date": "2020-04-22T09:40:31-0300",
+          "debit": false
+        },
+        {
+          "name": "Google inc.",
+          "price": 140.6,
+          "date": "2020-05-02T09:40:31-0300",
+          "debit": false
+        },
+        {
+          "name": "GoDaddy Inc.",
+          "price": 19.9,
+          "date": "2020-05-15T09:40:31-0300",
+          "debit": true
+        },
+        {
+          "name": "GoDaddy Inc.",
+          "price": 19.9,
+          "date": "2020-04-15T09:40:31-0300",
+          "debit": true
+        }
+      ]
     }
   ]
 }
