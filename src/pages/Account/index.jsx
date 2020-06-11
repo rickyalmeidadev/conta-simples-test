@@ -10,9 +10,13 @@ const Account = () => {
     }).catch(console.error);
   }, []);
 
+  if (!user) {
+    return <span>Loading...</span>;
+  }
+
   return (
     <>
-      <h1>Bem-vindo(a), Nome</h1>
+      <h1>Bem-vindo(a),{user.name}</h1>
 
       <section>
         <article data-testid="statement">

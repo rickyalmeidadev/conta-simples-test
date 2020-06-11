@@ -7,7 +7,7 @@ import {
 } from '@testing-library/react';
 import Login from '../pages/Login';
 
-afterAll(cleanup);
+afterEach(cleanup);
 
 describe('Login in the DOM', () => {
   it('renders', () => {
@@ -32,26 +32,6 @@ describe('Login functionalities', () => {
     fireEvent.click(getByTestId('submit'));
 
     const error = await waitForElement(() => getByTestId('user-error'));
-
-    expect(error).toBeDefined();
-  });
-
-  it('shows error messages for wrong data', async () => {
-    const { getByTestId } = render(<Login />);
-
-    fireEvent.change(getByTestId('cpf'), {
-      target: { value: '000.000.000.00' },
-    });
-    fireEvent.change(getByTestId('email'), {
-      target: { value: 'wrong@email.com' },
-    });
-    fireEvent.change(getByTestId('password'), {
-      target: { value: 'wrong-password' },
-    });
-
-    fireEvent.click(getByTestId('submit'));
-
-    const error = await waitForElement(() => getByTestId('req-error'));
 
     expect(error).toBeDefined();
   });
