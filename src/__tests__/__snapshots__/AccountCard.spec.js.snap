@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccountCard /> renders correctly 1`] = `
+<DocumentFragment>
+  <article>
+    <h2 />
+    <p />
+    <button
+      type="button"
+    />
+  </article>
+</DocumentFragment>
+`;
