@@ -78,6 +78,26 @@
           "date": "2020-04-15T09:40:31-0300",
           "debit": true
         }
+      ],
+      "creditCards": [
+        {
+          "id": 1,
+          "name": "Fernando Santos",
+          "valid": "05/24",
+          "number": "2847563920583754",
+          "brand": "visa",
+          "limit": 12000,
+          "availableLimit": 7560.80
+        },
+        {
+          "id": 2,
+          "name": "Fernando Santos",
+          "valid": "08/24",
+          "number": "2930572739482440",
+          "brand": "master",
+          "limit": 10000,
+          "availableLimit": 2240.80
+        }
       ]
     }
   ]
