@@ -2,12 +2,20 @@
 
 exports[`<AccountCard /> renders correctly 1`] = `
 <DocumentFragment>
-  <article>
-    <h2 />
-    <p />
-    <button
-      type="button"
-    />
+  <article
+    data-testid="statement"
+  >
+    <h2>
+      Conta corrente
+    </h2>
+    <p>
+      Consulte entradas e saídas pelo seu estrato.
+    </p>
+    <a
+      href="/statement"
+    >
+      Ver estrato
+    </a>
   </article>
 </DocumentFragment>
 `;

@@ -2,19 +2,22 @@
   {
     "title": "Conta corrente",
     "description": "Consulte entradas e saídas pelo seu estrato.",
-    "button": "Ver estrato",
+    "buttonText": "Ver estrato",
+    "link": "/statement",
     "test": "statement"
   },
   {
     "title": "Cartões",
     "description": "Acompanhe seu limite e faturas.",
-    "button": "Ver cartões",
+    "buttonText": "Ver cartões",
+    "link": "/credit-cards",
     "test": "credit-cards"
   },
   {
     "title": "Tranferêcia",
     "description": "Pague contas e faça tranferêcias de uma forma simples.",
-    "button": "Fazer tranferêcia",
+    "buttonText": "Fazer tranferêcia",
+    "link": "/tranfer",
     "test": "transfer"
   }
 ]
