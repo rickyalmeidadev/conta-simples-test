@@ -23,7 +23,7 @@ const Statement = () => {
 
       <ul>
         {user.transactions.map(transaction => (
-          <StatementCard {...transaction} />
+          <StatementCard key={transaction.id} {...transaction} />
         ))}
       </ul>
     </>

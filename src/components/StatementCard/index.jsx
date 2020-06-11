@@ -1,7 +1,7 @@
 import React from 'react';
 
-const StatementCard = ({ name, price, date }) => (
-  <li>
+const StatementCard = ({ id, name, price, date }) => (
+  <li data-testid={id}>
     <div>
       <h2>{name}</h2>
     </div>

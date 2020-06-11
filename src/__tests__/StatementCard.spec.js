@@ -7,6 +7,7 @@ afterEach(cleanup);
 
 describe('<StatementCard />', () => {
   const mockCard = {
+    id: 1,
     name: 'Facebook Inc.',
     price: 39.8,
     date: '2020-05-20T09:40:31-0300',
@@ -24,12 +25,13 @@ describe('<StatementCard />', () => {
   });
 
   it('displays the cards', () => {
-    const { getByText } = render(
+    const { getByText, getByTestId } = render(
       <Router>
         <StatementCard {...mockCard} />
       </Router>,
     );
 
+    expect(getByTestId(String(mockCard.id))).toBeDefined();
     expect(getByText(mockCard.name)).toBeDefined();
     expect(getByText(`R$ ${mockCard.price}`)).toBeDefined();
     expect(getByText(mockCard.date)).toBeDefined();

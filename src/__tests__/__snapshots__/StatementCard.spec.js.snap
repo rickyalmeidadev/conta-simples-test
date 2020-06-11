@@ -2,7 +2,9 @@
 
 exports[`<StatementCard /> renders correctly 1`] = `
 <DocumentFragment>
-  <li>
+  <li
+    data-testid="1"
+  >
     <div>
       <h2>
         Facebook Inc.
