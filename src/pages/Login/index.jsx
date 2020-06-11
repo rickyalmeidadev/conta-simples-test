@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { login, storeToken } from '../../services/services';
+import logo from '../../assets/logo-conta-simples.svg';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -50,7 +51,7 @@ const Login = () => {
     try {
       const response = await login(email, password);
       storeToken(response.data.accessToken);
-      history.push('/account');
+      history.push('/');
     } catch (error) {
       setReqError(true);
     }
@@ -59,59 +60,69 @@ const Login = () => {
   const { cpf, email, password } = formData;
 
   return (
-    <form onSubmit={handleSubmit}>
-      <fieldset>
-        <legend>Entrar</legend>
+    <div className="wrapper login-bg">
+      <main className="container container--center">
+        <form className="login" onSubmit={handleSubmit}>
+          <figure className="login__brand">
+            <img src={logo} alt="Conta Simples" />
+          </figure>
+          <fieldset className="login__box">
+            <legend className="login__title">Preencha seus dados</legend>
 
-        <label htmlFor="cpf">
-          CPF
-          <input
-            type="text"
-            id="cpf"
-            name="cpf"
-            maxLength="14"
-            value={cpf}
-            onChange={handleCpf}
-            data-testid="cpf"
-          />
-        </label>
+            <label className="label" htmlFor="cpf">
+              CPF
+              <input
+                className="input"
+                type="text"
+                id="cpf"
+                name="cpf"
+                maxLength="14"
+                value={cpf}
+                onChange={handleCpf}
+                data-testid="cpf"
+              />
+            </label>
 
-        <label htmlFor="email">
-          E-mail
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-            data-testid="email"
-          />
-        </label>
+            <label className="label" htmlFor="email">
+              E-mail
+              <input
+                className="input"
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+                data-testid="email"
+              />
+            </label>
 
-        <label htmlFor="password">
-          Senha
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-            data-testid="password"
-          />
-        </label>
+            <label className="label" htmlFor="password">
+              Senha
+              <input
+                className="input"
+                type="password"
+                id="password"
+                name="password"
+                value={password}
+                onChange={handleChange}
+                data-testid="password"
+              />
+            </label>
 
-        {userError && (
-          <span data-testid="user-error">
-            Por favor, insira todos os dados.
-          </span>
-        )}
-        {reqError && <span data-testid="req-error">Dados inválidos.</span>}
+            {userError && (
+            <span className="login__error" data-testid="user-error">
+              Por favor, insira todos os dados
+            </span>
+            )}
+            {reqError && <span className="login__error" data-testid="req-error">Dados inválidos</span>}
 
-        <button type="submit" data-testid="submit">
-          Entrar
-        </button>
-      </fieldset>
-    </form>
+            <button className="btn" type="submit" data-testid="submit">
+              Entrar
+            </button>
+          </fieldset>
+        </form>
+      </main>
+    </div>
   );
 };
 

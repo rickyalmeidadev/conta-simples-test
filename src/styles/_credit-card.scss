@@ -1,0 +1,67 @@
+.credit-card {
+  position: relative;
+  color: $white;
+  width: 400px;
+  height: 200px;
+  background: $black;
+  padding: 2rem;
+  border-radius: 1rem;
+  @include column;
+  justify-content: space-between;
+
+  &__company {
+    align-self: flex-start;
+    width: 100px;
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__top {
+    width: 100%;
+
+    margin-top: 1rem;
+
+    &__number {
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 0.4rem;
+    }
+  }
+
+  &__bottom {
+    @include row;
+    width: 100%;
+    justify-content: space-between;
+
+    &__info {
+      padding: 0 1rem;
+      height: 100%;
+      @include column;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
+
+    &__name {
+      text-transform: uppercase;
+    }
+
+    &__brand {
+      width: 80px;
+      height: 20px;
+      position: absolute;
+      right: 30px;
+      bottom: 45px;
+
+      &--visa {
+        bottom: 25px;
+      }
+
+
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+}

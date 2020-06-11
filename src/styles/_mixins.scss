@@ -1,0 +1,17 @@
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin box-shadow {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}

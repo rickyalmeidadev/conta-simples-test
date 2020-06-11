@@ -1,0 +1,42 @@
+.login {
+  @include box-shadow;
+  background-color: $white;
+  border-radius: 0.4rem;
+  padding: 4rem;
+
+  &__box {
+    @include column;
+  }
+
+  &__brand {
+    margin: 1rem auto 4rem;
+    width: 100%;
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $grey;
+    margin: 2rem auto;
+  }
+
+  &__error {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $red;
+    font-size: 1.2rem;
+  }
+
+  &-bg{
+    background-image: url('../assets/login-bg.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+
+}
+

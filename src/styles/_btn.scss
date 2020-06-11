@@ -1,0 +1,22 @@
+.btn {
+  background: $green;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+
+  padding: 1rem;
+  margin-top: 4rem;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+
+  transition: all 400ms ease-in;
+
+  &:hover {
+    background-color: lighten($green, 20%);
+    color: lighten($black, 20%);
+
+    transition: all 400ms ease-in;
+  }
+}

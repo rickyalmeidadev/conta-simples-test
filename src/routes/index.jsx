@@ -10,8 +10,8 @@ import NotFound from '../pages/NotFound';
 const Routes = () => (
   <Router>
     <Switch>
-      <Route exact path="/" component={Login} />
-      <PrivateRoute exact path="/account" component={Account} />
+      <Route exact path="/login" component={Login} />
+      <PrivateRoute exact path="/" component={Account} />
       <PrivateRoute exact path="/statement" component={Statement} />
       <PrivateRoute exact path="/credit-cards" component={CreditCards} />
       <Route exact path="*" component={NotFound} />
