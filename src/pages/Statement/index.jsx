@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getUser } from '../../services/services';
+import Navbar from '../../components/Navbar';
 import StatementCard from '../../components/StatementCard';
 
 const Statement = () => {
@@ -19,6 +20,7 @@ const Statement = () => {
 
   return (
     <>
+      <Navbar />
       <h1>Estrato</h1>
 
       <ul>

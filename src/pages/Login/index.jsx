@@ -60,7 +60,7 @@ const Login = () => {
   const { cpf, email, password } = formData;
 
   return (
-    <div className="wrapper login-bg">
+    <div className="wrapper wrapper--row login-bg">
       <main className="container container--center">
         <form className="login" onSubmit={handleSubmit}>
           <figure className="login__brand">

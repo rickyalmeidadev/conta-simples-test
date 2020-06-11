@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getUser } from '../../services/services';
+import Navbar from '../../components/Navbar';
 import CreditCard from '../../components/CreditCard';
 
 const CreditCards = () => {
@@ -19,6 +20,7 @@ const CreditCards = () => {
 
   return (
     <>
+      <Navbar />
       <h1>Meus cartões</h1>
 
 
