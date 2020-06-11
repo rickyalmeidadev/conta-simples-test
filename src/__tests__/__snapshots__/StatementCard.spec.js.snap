@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StatementCard /> renders correctly 1`] = `
+<DocumentFragment>
+  <li>
+    <div>
+      <h2>
+        Facebook Inc.
+      </h2>
+    </div>
+    <div>
+      <span>
+        R$ 39.8
+      </span>
+      <span>
+        2020-05-20T09:40:31-0300
+      </span>
+    </div>
+  </li>
+</DocumentFragment>
+`;

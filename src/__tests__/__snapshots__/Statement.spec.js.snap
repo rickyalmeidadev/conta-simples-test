@@ -2,8 +2,8 @@
 
 exports[`<Statement /> renders correctly 1`] = `
 <DocumentFragment>
-  <h1>
-    Statement
-  </h1>
+  <span>
+    Loading...
+  </span>
 </DocumentFragment>
 `;
