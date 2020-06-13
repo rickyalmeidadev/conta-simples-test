@@ -1,4 +1,27 @@
-.my-credit-cards {
-  margin-top: 2rem;
+.credit-cards {
+  margin-top: 4rem;
   @include row(space-between, center);
+  flex-wrap: wrap;
+
+  &__group {
+    @include box-shadow;
+    padding: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  @media (max-width: 900px) {
+    @include column(space-between, center);
+  }
+}
+
+.info {
+  margin-top: 2rem;
+  &__text {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__value {
+    color: darken($green, 10%);
+  }
 }

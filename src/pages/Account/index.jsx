@@ -9,7 +9,7 @@ const Account = () => {
 
   useEffect(() => {
     getUser()
-      .then(response => {
+      .then((response) => {
         setUser(response.data);
       })
       .catch(console.error);
@@ -22,16 +22,20 @@ const Account = () => {
   return (
     <div className="wrapper">
       <Navbar />
+      <header className="container">
+        <h2 className="title title--green">Minha conta</h2>
+      </header>
       <div className="container">
-        <header className="header">
-          <h2>Minha conta</h2>
-          <span>Saldo atual: {user.balance}</span>
-        </header>
+        <p className="info">
+          <span className="info__text">Saldo atual: </span>
+          <span className="info__value">R$ {user.balance.toFixed(2)}</span>
+        </p>
       </div>
 
-
-      <section className="container">
-        {cards.map(card => <AccountCard key={card.test} {...card} />)}
+      <section className="container account-grid">
+        {cards.map((card) => (
+          <AccountCard key={card.test} {...card} />
+        ))}
       </section>
     </div>
   );

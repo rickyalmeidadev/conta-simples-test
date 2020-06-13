@@ -1,0 +1,19 @@
+.account-card {
+  padding: 2rem;
+  @include column(space-between, center);
+  @include box-shadow();
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    color: $grey;
+    text-align: center;
+    font-weight: 200;
+    margin-bottom: 4rem;
+  }
+}

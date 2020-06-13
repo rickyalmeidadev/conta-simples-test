@@ -13,8 +13,8 @@ const CreditCard = ({ id, name, valid, number, brand, limit, availableLimit }) =
   }, '');
 
   return (
-    <>
-      <div className="credit-card" data-testid={id}>
+    <div className="credit-cards__group">
+      <article className="credit-card" data-testid={id}>
         <figure className="credit-card__company">
           <img src={contaSimplesLogo} alt="Conta Simples" />
         </figure>
@@ -36,13 +36,22 @@ const CreditCard = ({ id, name, valid, number, brand, limit, availableLimit }) =
             <img src={brand === 'visa' ? visaLogo : masterCardLogo} alt={brand} />
           </figure>
         </div>
-      </div>
+      </article>
 
-      <div>
-        <p>Limite disponível: {availableLimit}</p>
-        <p>Limite total: {limit}</p>
-      </div>
-    </>
+      <article className="info">
+        <p className="info__text">Limite disponível:{' '}
+          <span className="info__value">
+            R$ {availableLimit.toFixed(2)}
+          </span>
+        </p>
+        <p className="info__text">
+          Limite total:{' '}
+          <span className="info__value">
+            R$ {limit.toFixed(2)}
+          </span>
+        </p>
+      </article>
+    </div>
   );
 };
 

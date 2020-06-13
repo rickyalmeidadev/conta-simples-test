@@ -21,12 +21,12 @@ const CreditCards = () => {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <header className="container">
         <h1 className="title title--green">Meus cartões</h1>
-      </div>
+      </header>
 
       <div className="container">
-        <section className="my-credit-cards">
+        <section className="credit-cards">
           {user.creditCards.map((creditCard) => (
             <CreditCard key={creditCard.id} {...creditCard} />
           ))}
