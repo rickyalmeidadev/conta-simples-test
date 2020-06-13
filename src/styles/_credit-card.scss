@@ -6,8 +6,7 @@
   background: $black;
   padding: 2rem;
   border-radius: 1rem;
-  @include column;
-  justify-content: space-between;
+  @include column(space-between, center);
 
   &__company {
     align-self: flex-start;
@@ -31,16 +30,13 @@
   }
 
   &__bottom {
-    @include row;
+    @include row(space-between, center);
     width: 100%;
-    justify-content: space-between;
 
     &__info {
       padding: 0 1rem;
       height: 100%;
-      @include column;
-      align-items: flex-end;
-      justify-content: space-around;
+      @include column(space-around, flex-end);
     }
 
     &__name {

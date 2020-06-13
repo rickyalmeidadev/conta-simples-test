@@ -8,7 +8,7 @@ const CreditCards = () => {
 
   useEffect(() => {
     getUser()
-      .then(response => {
+      .then((response) => {
         setUser(response.data);
       })
       .catch(console.error);
@@ -21,12 +21,17 @@ const CreditCards = () => {
   return (
     <>
       <Navbar />
-      <h1>Meus cartões</h1>
+      <div className="container">
+        <h1 className="title title--green">Meus cartões</h1>
+      </div>
 
-
-      <section>
-        {user.creditCards.map(creditCard => <CreditCard key={creditCard.id} {...creditCard} />)}
-      </section>
+      <div className="container">
+        <section className="my-credit-cards">
+          {user.creditCards.map((creditCard) => (
+            <CreditCard key={creditCard.id} {...creditCard} />
+          ))}
+        </section>
+      </div>
     </>
   );
 };
