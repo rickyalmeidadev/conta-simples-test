@@ -19,7 +19,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "json-server src/mock/db.json -m ./node_modules/json-server-auth --port 5000 & react-scripts start",
+    "dev": "react-scripts start",
     "server": "json-server src/mock/db.json -m ./node_modules/json-server-auth --port 5000",
     "build": "react-scripts build",
     "test": "react-scripts test",
