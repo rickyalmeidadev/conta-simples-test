@@ -23,6 +23,13 @@ a {
   color: inherit;
 }
 
+.loading {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  @include row(center, center);
+}
+
 .wrapper {
   width: 100%;
 

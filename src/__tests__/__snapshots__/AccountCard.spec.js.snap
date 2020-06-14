@@ -3,18 +3,29 @@
 exports[`<AccountCard /> renders correctly 1`] = `
 <DocumentFragment>
   <article
+    class="account-card"
     data-testid="statement"
   >
-    <h2>
+    <h2
+      class="account-card__title"
+    >
       Conta corrente
     </h2>
-    <p>
+    <p
+      class="account-card__description"
+    >
       Consulte entradas e saídas pelo seu estrato.
     </p>
     <a
+      class="btn--link"
       href="/statement"
     >
-      Ver estrato
+      <button
+        class="btn btn--card"
+        type="button"
+      >
+        Ver estrato
+      </button>
     </a>
   </article>
 </DocumentFragment>

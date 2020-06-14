@@ -1,7 +1,7 @@
 import React from 'react';
-import contaSimplesLogo from '../../assets/logo-conta-simples-white.svg';
-import visaLogo from '../../assets/logo-visa.png';
-import masterCardLogo from '../../assets/logo-mastercard.png';
+import contaSimplesLogo from '../assets/logo-conta-simples-white.svg';
+import visaLogo from '../assets/logo-visa.png';
+import masterCardLogo from '../assets/logo-mastercard.png';
 
 const CreditCard = ({ id, name, valid, number, brand, limit, availableLimit }) => {
   const cardNumber = [...number].reduce((acc, cur, i) => {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { login, storeToken } from '../../services/services';
-import logo from '../../assets/logo-conta-simples.svg';
+import { login, storeToken } from '../services/services';
+import logo from '../assets/logo-conta-simples.svg';
 
 const Login = () => {
   const [formData, setFormData] = useState({

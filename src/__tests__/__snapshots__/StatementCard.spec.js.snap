@@ -3,19 +3,32 @@
 exports[`<StatementCard /> renders correctly 1`] = `
 <DocumentFragment>
   <li
+    class="transactions__item"
     data-testid="1"
   >
     <div>
-      <h2>
+      <h2
+        class="transactions__title"
+      >
         Facebook Inc.
       </h2>
     </div>
-    <div>
-      <span>
-        R$ 39.8
+    <div
+      class="transactions__info"
+    >
+      <span
+        class="transactions__value transactions__value--debit"
+      >
+        R$ 39.80
       </span>
-      <span>
-        2020-05-20T09:40:31-0300
+      <span
+        class="transactions__date"
+      >
+        <time
+          datetime="1589978431000"
+        >
+          20/05/2020
+        </time>
       </span>
     </div>
   </li>

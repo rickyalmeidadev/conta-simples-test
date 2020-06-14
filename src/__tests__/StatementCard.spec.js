@@ -33,7 +33,7 @@ describe('<StatementCard />', () => {
 
     expect(getByTestId(String(mockCard.id))).toBeDefined();
     expect(getByText(mockCard.name)).toBeDefined();
-    expect(getByText(`R$ ${mockCard.price}`)).toBeDefined();
-    expect(getByText(mockCard.date)).toBeDefined();
+    expect(getByText(`R$ ${mockCard.price.toFixed(2)}`)).toBeDefined();
+    expect(getByText('20/05/2020')).toBeDefined();
   });
 });

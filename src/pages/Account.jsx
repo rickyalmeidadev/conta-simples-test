@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { getUser } from '../../services/services';
-import Navbar from '../../components/Navbar';
-import AccountCard from '../../components/AccountCard';
-import cards from '../../utils/cards.json';
+import { BounceLoader } from 'react-spinners';
+import { getUser } from '../services/services';
+import Navbar from '../components/Navbar';
+import AccountCard from '../components/AccountCard';
+import cards from '../utils/cards.json';
 
 const Account = () => {
   const [user, setUser] = useState(null);
@@ -16,7 +17,11 @@ const Account = () => {
   }, []);
 
   if (!user) {
-    return <span>Loading...</span>;
+    return (
+      <div className="loading">
+        <BounceLoader color="#7be115" size="5rem" />
+      </div>
+    );
   }
 
   return (

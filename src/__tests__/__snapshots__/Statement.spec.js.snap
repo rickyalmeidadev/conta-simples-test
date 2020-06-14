@@ -2,8 +2,19 @@
 
 exports[`<Statement /> renders correctly 1`] = `
 <DocumentFragment>
-  <span>
-    Loading...
-  </span>
+  <div
+    class="loading"
+  >
+    <div
+      class="css-1sadfy4"
+    >
+      <div
+        class="css-1m3n18k"
+      />
+      <div
+        class="css-1l3m8cd"
+      />
+    </div>
+  </div>
 </DocumentFragment>
 `;

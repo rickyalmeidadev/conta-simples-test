@@ -43,6 +43,16 @@ npm run dev
 
 Pronto, a aplicação já pode ser acessada visitando http://localhost:3000.
 
+## Login e auteticação
+
+Para fazer login na aplicação use as seguintes credenciais:
+
+```
+CPF: 000.000.000-00
+email: fernando@email.com
+senha: senha123
+```
+
 ## Tecnologias usadas
 
 - [ReactJS](https://reactjs.org/)

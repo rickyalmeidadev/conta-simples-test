@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { getUser } from '../../services/services';
-import Navbar from '../../components/Navbar';
-import CreditCard from '../../components/CreditCard';
+import { BounceLoader } from 'react-spinners';
+import { getUser } from '../services/services';
+import Navbar from '../components/Navbar';
+import CreditCard from '../components/CreditCard';
 
 const CreditCards = () => {
   const [user, setUser] = useState(null);
@@ -15,7 +16,11 @@ const CreditCards = () => {
   }, []);
 
   if (!user) {
-    return <span>Loading...</span>;
+    return (
+      <div className="loading">
+        <BounceLoader color="#7be115" size="5rem" />
+      </div>
+    );
   }
 
   return (
