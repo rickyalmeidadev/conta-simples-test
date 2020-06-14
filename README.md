@@ -72,7 +72,9 @@ senha: senha123
 - [x] Tela de extratos com opções para ordernar dados por valor e data.
 - [x] Tela de cartões com cartão estilizado em CSS.
 - [x] Responsivo com menu hamburguer para mobile.
+- [x] Cobertura parcial de testes unitários.
 - [ ] Tela para fazer pagamentos e transações.
+- [ ] Cobertura total de testes unitários e end-to-end.
 
 ## Autor
 
