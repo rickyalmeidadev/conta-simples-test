@@ -14,7 +14,7 @@
     "test": "credit-cards"
   },
   {
-    "title": "Tranferêcia",
+    "title": "Transferêcias",
     "description": "Pague contas e faça tranferêcias de uma forma simples.",
     "buttonText": "Fazer tranferêcia",
     "link": "/tranfer",

@@ -21,6 +21,7 @@
     "react/prop-types": 0,
     "arrow-parens": 0,
     "react/jsx-one-expression-per-line": 0,
-    "object-curly-newline": 0
+    "object-curly-newline": 0,
+    "no-shadow": 0
   }
 }

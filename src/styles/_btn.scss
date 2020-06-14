@@ -20,7 +20,11 @@
     transition: all 400ms ease-in;
   }
 
-  &--card {
+  &--card, &--link {
     width: 100%;
+  }
+
+  &--inactive {
+    font-style: italic;
   }
 }

@@ -1,0 +1,63 @@
+.transactions-header {
+  @include row(space-between, center);
+}
+
+.transactions {
+  margin-top: 4rem;
+  width: 100%;
+
+  &__item {
+    @include row(space-between, center);
+    @include box-shadow();
+    padding: 2rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 800px) {
+      @include column(flex-start, center);
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__info {
+    min-width: 30%;
+    @include row(space-between, center);
+
+    @media (max-width: 800px) {
+      min-width: auto;
+      margin-top: 2rem;
+    }
+  }
+
+  &__value,
+  &__date {
+    font-size: 1.8rem;
+
+    @media (max-width: 800px) {
+      margin: 0 2rem;
+    }
+  }
+
+  &__value {
+    color: $green;
+
+    &--debit {
+      color: $red;
+    }
+  }
+}
+
+.select {
+  @include box-shadow();
+  border: none;
+  color: $grey;
+  outline: none;
+  cursor: pointer;
+
+  padding: 0.4rem 1rem;
+  font-size: 1.6rem;
+}
