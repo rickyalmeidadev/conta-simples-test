@@ -7,3 +7,11 @@
     transform: translateY(0);
   }
 }
+
+@keyframes show {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}

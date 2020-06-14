@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { logout } from '../services/services';
 import logo from '../assets/logo-conta-simples.svg';
 
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
+  const history = useHistory();
+
   const handleToggle = () => {
     setToggle(!toggle);
+  };
+
+  const handleLogout = () => {
+    logout();
+    history.replace('/login');
   };
 
   return (
@@ -56,10 +64,10 @@ const Navbar = () => {
               Cartões
             </NavLink>
           </li>
-          <li className="navbar__item">
-            <NavLink activeClassName="navbar__item--active" exact to="/tranfer">
-              Transferências
-            </NavLink>
+          <li className="navbar__item navbar__item--btn">
+            <button type="button" className="btn btn--nav" onClick={handleLogout}>
+              Logout
+            </button>
           </li>
         </ul>
       </nav>

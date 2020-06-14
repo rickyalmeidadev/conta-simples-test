@@ -42,6 +42,10 @@
     &--active {
       font-weight: 700;
     }
+
+    &--btn:hover {
+      border: none;
+    }
   }
 
   @media (max-width: 600px) {
@@ -60,8 +64,8 @@
       @include box-shadow();
       right: 0;
       top: 0;
-      width: 50vw;
-      max-width: 250px;
+      width: 35vw;
+      min-width: 150px;
       height: 100vh;
       background: $green;
       padding: 3rem;
@@ -95,13 +99,5 @@
     height: 100%;
 
     animation: show 200ms ease-in forwards;
-  }
-}
-
-@keyframes show {
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
   }
 }
