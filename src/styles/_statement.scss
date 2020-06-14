@@ -12,6 +12,8 @@
     padding: 2rem;
     margin-bottom: 1rem;
 
+    animation: up 500ms ease-in forwards;
+
     @media (max-width: 800px) {
       @include column(flex-start, center);
     }
@@ -53,6 +55,7 @@
 
 .select {
   @include box-shadow();
+  background-color: $white;
   border: none;
   color: $grey;
   outline: none;

@@ -7,6 +7,8 @@
     @include box-shadow;
     padding: 3rem;
     margin-bottom: 4rem;
+
+    animation: up 500ms ease-in forwards;
   }
 
   @media (max-width: 900px) {

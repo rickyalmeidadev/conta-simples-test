@@ -3,6 +3,8 @@
   @include column(space-between, center);
   @include box-shadow();
 
+  animation: up 500ms ease-in forwards;
+
   &__title {
     text-align: center;
     font-size: 2rem;
