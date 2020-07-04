@@ -110,11 +110,15 @@ const Login = () => {
             </label>
 
             {userError && (
-            <span className="login__error" data-testid="user-error">
-              Por favor, insira todos os dados
-            </span>
+              <span className="login__error" data-testid="user-error">
+                Por favor, insira todos os dados
+              </span>
             )}
-            {reqError && <span className="login__error" data-testid="req-error">Dados inválidos</span>}
+            {reqError && (
+              <span className="login__error" data-testid="req-error">
+                Dados inválidos
+              </span>
+            )}
 
             <button className="btn" type="submit" data-testid="submit">
               Entrar
